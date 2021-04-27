@@ -44,7 +44,7 @@ class SeleniumMiddleware:
         driver_kwargs = {
             'executable_path': driver_executable_path,
             f'{driver_name}_options': driver_options,
-            'seleniumwire_options': {'connection_timeout': 60}
+            'seleniumwire_options': {'connection_timeout': 45}
         }
 
         # locally installed driver
@@ -52,7 +52,7 @@ class SeleniumMiddleware:
             driver_kwargs = {
                 'executable_path': driver_executable_path,
                 f'{driver_name}_options': driver_options,
-                'seleniumwire_options': {'connection_timeout': 60}
+                'seleniumwire_options': {'connection_timeout': 45}
             }
             self.driver = driver_klass(**driver_kwargs)
         # remote driver
